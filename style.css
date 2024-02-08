@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap');
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+    --yellow: hsl(47, 88%, 63%);
+
+    --rounded: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree', sans-serif;
+}
+a,
+a:active{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+}
+.btn{
+    font-weight: 600;
+}
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5rem;
+    background-color: var(--yellow);
+}
+.card{
+    width: 24rem;
+    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--white);
+    padding: 1.3rem;
+    box-shadow: 7px 7px 0 var(--black);
+    border: solid 1px var(--black);
+    border-radius: var(--rounded);
+}
+.card>img{
+    border-radius: var(--rounded);
+    display: inline-block;
+}
+.card .btn{
+    background-color: var(--yellow);
+    border-radius: calc(var(--rounded)/2);
+    padding: .3em .8em;
+    width: fit-content;
+}
+.card .published{
+    font-size: .9rem;
+    font-weight: 600;
+}
+.card p{
+    color: var(--grey);
+}
+.card a>h2:hover{
+    color: var(--yellow);
+}
+.card .author{
+    display: inline-flex;
+    align-items: center;
+    gap: .8rem;
+    font-weight: 600;
+}
+.author:hover{
+    color: var(--yellow);
+}
+.author>img{
+    width: 2.3rem;
+    
+}
+
+@media (max-width: 500px){
+    .card{
+        width: 70vw;
+    }
+}
